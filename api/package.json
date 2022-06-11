@@ -6,8 +6,8 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "start": "node --experimental-specifier-resolution=node src/index.js --presets es2015,stage-0",
-    "start:dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "start": "node --experimental-specifier-resolution=node src/index.js",
+    "start:dev": "nodemon --experimental-specifier-resolution=node src/index.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "test:dev": "node --experimental-vm-modules node_modules/.bin/jest --watch",
     "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage"
