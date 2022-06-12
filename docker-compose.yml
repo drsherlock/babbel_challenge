@@ -1,0 +1,26 @@
+version: "3"
+services:
+  api:
+    container_name: api
+    build: ./api
+    command: yarn run start
+    ports:
+      - 81:81
+    depends_on:
+      - redis
+    environment:
+      - PORT=81
+      - REDIS_PORT=6379
+      - REDIS_HOST=redis
+  redis:
+    container_name: redis
+    image: "redis:alpine"
+    command: redis-server
+    ports:
+      - "6379:6379"
+  ui:
+    container_name: ui
+    build: ./ui
+    command: yarn run start
+    ports:
+      - 3000:3000
