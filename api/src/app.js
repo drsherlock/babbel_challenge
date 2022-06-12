@@ -1,9 +1,11 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
+import Redis from "ioredis";
 
 import winston from "./winston";
 import appController from "./app.controller";
+import { seedCache } from "./utils/cacheUtil";
 
 const app = express();
 
@@ -18,7 +20,14 @@ app.use(
 
 app.use(cors());
 
-app.use("/api/v1", appController());
+const cache = new Redis(
+  process.env.REDIS_PORT || "6379",
+  process.env.REDIS_HOST || "127.0.0.1"
+);
+
+await seedCache({ cache });
+
+app.use("/api/v1", appController({ cache }));
 
 app.get("*", (req, res, next) => {
   const error = new Error(`Invalid request`);
