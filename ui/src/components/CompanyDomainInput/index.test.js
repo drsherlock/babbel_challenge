@@ -12,7 +12,7 @@ test("renders CompanyDomainInput", () => {
       handleCompanyDomainChange={handleCompanyDomainChange}
     />
   );
-  
+
   expect(getByText("Enter Company Domain")).toBeInTheDocument();
 });
 

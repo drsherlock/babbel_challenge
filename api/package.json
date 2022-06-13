@@ -10,7 +10,8 @@
     "start:dev": "nodemon --experimental-specifier-resolution=node src/index.js",
     "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "test:dev": "node --experimental-vm-modules node_modules/.bin/jest --watch",
-    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage"
+    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
+    "format": "prettier -w ./src"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -30,15 +31,14 @@
   "license": "ISC",
   "dependencies": {
     "app-root-path": "^3.0.0",
-    "axios": "^0.24.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "ioredis": "^4.28.0",
     "morgan": "^1.10.0",
+    "prettier": "^2.6.2",
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "axios-mock-adapter": "^1.20.0",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.0",
     "babel-preset-es2015": "^6.9.0",

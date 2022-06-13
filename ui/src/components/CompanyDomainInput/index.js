@@ -6,7 +6,7 @@ function CompanyDomainInput(props) {
   return (
     <>
       <div>
-      <span>Enter Company Domain </span>
+        <span>Enter Company Domain </span>
         <input
           type="text"
           value={companyDomain}

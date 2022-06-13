@@ -6,7 +6,7 @@ function FullNameInput(props) {
   return (
     <>
       <div>
-      <span>Enter Full Name </span>
+        <span>Enter Full Name </span>
         <input
           type="text"
           value={fullName}

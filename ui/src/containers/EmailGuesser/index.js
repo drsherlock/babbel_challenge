@@ -7,7 +7,7 @@ import FullNameInput from "../../components/FullNameInput";
 import GuessButton from "../../components/GuessButton";
 import EmailGuess from "../../components/EmailGuess";
 import Loader from "../../components/Loader";
-import Error from "../../components/Error"
+import Error from "../../components/Error";
 
 import { getEmailGuess } from "../../actions";
 
@@ -15,23 +15,23 @@ function EmailGuesser(props) {
   const { loading, emailGuess, getEmailGuess, error } = props;
   const [fullName, setFullName] = useState("");
   const [companyDomain, setCompanyDomain] = useState("");
-  
+
   const handleFullNameChange = (e) => setFullName(e.target.value);
 
   const handleCompanyDomainChange = (e) => setCompanyDomain(e.target.value);
 
   const handleGuessClick = () => {
-    if(!fullName || fullName.split(" ").length < 2) {
-      alert("Please provide correct full name")
-      return
+    if (!fullName || fullName.split(" ").length < 2) {
+      alert("Please provide correct full name");
+      return;
     }
 
-    if(!companyDomain || companyDomain.split(".").length < 2) {
-      alert("Please provide correct company domain")
-      return
+    if (!companyDomain || companyDomain.split(".").length < 2) {
+      alert("Please provide correct company domain");
+      return;
     }
 
-    getEmailGuess({ fullName, companyDomain })
+    getEmailGuess({ fullName, companyDomain });
   };
 
   return (
