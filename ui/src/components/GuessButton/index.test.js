@@ -12,7 +12,7 @@ test("renders GuessButton", () => {
   expect(getByText("Guess")).toBeInTheDocument();
 });
 
-test("updates on input change", () => {
+test("updates on button click", () => {
   const handleGuessClick = jest.fn(() => {});
 
   const { getByTestId } = render(

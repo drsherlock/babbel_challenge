@@ -6,14 +6,14 @@ test("renders FullNameInput", () => {
   const fullName = "";
   const handleFullNameChange = jest.fn(() => {});
 
-  const { getByText } = render(
+  const { getByPlaceholderText } = render(
     <FullNameInput
       fullName={fullName}
       handleFullNameChange={handleFullNameChange}
     />
   );
 
-  expect(getByText("Enter Full Name")).toBeInTheDocument();
+  expect(getByPlaceholderText("Full Name")).toBeInTheDocument();
 });
 
 test("updates on input change", () => {

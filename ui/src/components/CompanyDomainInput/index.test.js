@@ -6,14 +6,14 @@ test("renders CompanyDomainInput", () => {
   const companyDomain = "";
   const handleCompanyDomainChange = jest.fn(() => {});
 
-  const { getByText } = render(
+  const { getByPlaceholderText } = render(
     <CompanyDomainInput
       companyDomain={companyDomain}
       handleCompanyDomainChange={handleCompanyDomainChange}
     />
   );
 
-  expect(getByText("Enter Company Domain")).toBeInTheDocument();
+  expect(getByPlaceholderText("Company Domain")).toBeInTheDocument();
 });
 
 test("updates on input change", () => {

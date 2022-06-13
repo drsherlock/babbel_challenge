@@ -4,17 +4,15 @@ function FullNameInput(props) {
   const { fullName, handleFullNameChange } = props;
 
   return (
-    <>
-      <div>
-        <span>Enter Full Name </span>
-        <input
-          type="text"
-          value={fullName}
-          onChange={handleFullNameChange}
-          data-testid="full-name-testid"
-        />
-      </div>
-    </>
+    <div>
+      <input
+        type="text"
+        placeholder="Full Name"
+        value={fullName}
+        onChange={handleFullNameChange}
+        data-testid="full-name-testid"
+      />
+    </div>
   );
 }
 

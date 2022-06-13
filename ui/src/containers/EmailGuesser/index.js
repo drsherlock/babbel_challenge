@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
+import Title from "../../components/Title";
 import CompanyDomainInput from "../../components/CompanyDomainInput";
 import FullNameInput from "../../components/FullNameInput";
 import GuessButton from "../../components/GuessButton";
@@ -36,7 +37,7 @@ function EmailGuesser(props) {
 
   return (
     <>
-      <h4>Email Guesser</h4>
+      <Title />
       <FullNameInput
         fullName={fullName}
         handleFullNameChange={handleFullNameChange}
