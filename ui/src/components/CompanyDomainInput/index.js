@@ -5,13 +5,13 @@ function CompanyDomainInput(props) {
 
   return (
     <>
-      <div id="company-domain">
-      <span className="options-label">Enter Company Domain </span>
+      <div>
+      <span>Enter Company Domain </span>
         <input
           type="text"
           value={companyDomain}
           onChange={handleCompanyDomainChange}
-          data-testid="input-testid"
+          data-testid="company-domain-testid"
         />
       </div>
     </>

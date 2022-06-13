@@ -5,13 +5,13 @@ function FullNameInput(props) {
 
   return (
     <>
-      <div id="title">
-      <span className="options-label">Enter Full Name </span>
+      <div>
+      <span>Enter Full Name </span>
         <input
           type="text"
           value={fullName}
           onChange={handleFullNameChange}
-          data-testid="input-testid"
+          data-testid="full-name-testid"
         />
       </div>
     </>

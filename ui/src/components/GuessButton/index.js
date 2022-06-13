@@ -4,11 +4,11 @@ function GuessButton(props) {
   const { handleGuessClick } = props;
 
   return (
-    <div id="guess-button">
+    <div>
       <button
         onClick={() => handleGuessClick()}
         type="button"
-        data-testid="button-testid"
+        data-testid="guess-button-testid"
       >
         Guess
       </button>
