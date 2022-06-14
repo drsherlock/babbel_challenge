@@ -1,5 +1,6 @@
 import { BadRequestError } from "../errors";
 import EmailGuessesService from "./email-guesses.service";
+import cacheMiddleware from "../middlewares/cacheMiddleware";
 
 const EmailGuessesController = ({ router, cache }) => {
   const emailGuessesService = EmailGuessesService({ cache });
@@ -21,7 +22,7 @@ const EmailGuessesController = ({ router, cache }) => {
     }
   };
 
-  router.get("/email-guesses", getEmailGuess);
+  router.get("/email-guesses", cacheMiddleware({ cache }), getEmailGuess);
 };
 
 export default EmailGuessesController;
