@@ -1,5 +1,6 @@
 # Zain-Ul-Haq-Coding-Challenge
 
+##### Note - requried node version >= 14.x 
 ### To run the project on localhost -
 
 docker-compose build\
