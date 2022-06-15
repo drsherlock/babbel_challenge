@@ -11,6 +11,11 @@ docker-compose up
 yarn install\
 yarn run start(api has dependency on redis to run)
 
+### To run tests for individual projects -
+
+yarn install\
+yarn test
+
 ### To deploy the project -
 
 Different deployment strategies could be used depending on the maturity of the project. On approval of merge request to the main branch
